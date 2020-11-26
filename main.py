@@ -1,9 +1,13 @@
-import modules.SayHello as App
+from diaries.DiarySample import DiarySample
+from diaries.MainichiDiaryNew import MainichiDiaryNew
 
-def run():
-    app = App.SayHello("GitHub")
-    app.say()
+diaries = [DiarySample(),
+MainichiDiaryNew(),
+ ]
 
-
-if __name__ == '__main__':
-    run()
+for d in diaries:
+    print("---------------------------------")
+    print(d.get_date())
+    print(d.get_summary())
+    print(d.get_author())
+    print()
